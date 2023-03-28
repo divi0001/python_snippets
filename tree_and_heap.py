@@ -75,14 +75,7 @@ def update_tree_at(path,new_tree,tree) :
     else :
         return update_tree_at(path[1:],new_tree,right(tree))
 
-# Beachte, dass diese Implementierung sich leider nicht an den
-# Merksatz der Vorlesung hält. Es gibt mutierende Opearationen auf den
-# Binärbäumen. Deshalb darf die Funktion update_tree_at ihr Argument,
-# welches sie nicht mutiert, nicht unkopiert zurückgeben und auch nicht
-# unkopiert in den Binärbaum einfügen. Für den Pfad '' tut sie dies
-# aber direkt für den übergebenen einzufügenden Binärbaum, bzw. fügt
-# diesen bei allen anderen Pfaden unkopiert ein. Deshalb ist es sinnvoll,
-# den Baum als Kopie einzugüfen:
+
 def copy_tree(tree) :
     if is_empty(tree) :
         return empty()
